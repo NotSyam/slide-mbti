@@ -75,7 +75,7 @@ def make_header(category, title, badge_text, badge_color="bg-[#4F90F6]/15 text-[
     </div>
     """
 
-# Archetype card with Top Header (MBTI + The... + Name), Middle Photo Window, and Bottom Text Cards
+# Archetype card with Top Header Pill (Name, MBTI, The ...) + Linear Gradient Mask photo + mathematically aligned bullets
 def make_archetype_card(type_code, type_title, figure_name, img_data, strengths, weaknesses, partner_types, badge_bg="bg-[#2563EB]"):
     s_html = "".join([
         f"""<li class="bento-bullet">
@@ -92,32 +92,31 @@ def make_archetype_card(type_code, type_title, figure_name, img_data, strengths,
     
     return f"""
     <div class="relative bg-white rounded-[28px] border-2 border-slate-200 shadow-md p-5 flex flex-col justify-between overflow-hidden group hover:border-[#2563EB] transition-all">
-        <!-- Photo with Linear Gradient Mask: Head & Face are prominently visible below top header, torso fades into white -->
-        <div class="absolute top-[76px] left-0 right-0 h-[50%] pointer-events-none overflow-hidden select-none"
-             style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.90) 52%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.90) 52%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 100%);">
-            <img src="{img_data}" class="w-full h-full object-cover object-top filter grayscale-[10%] contrast-115 opacity-85 transition-transform duration-500 group-hover:scale-105" alt="{figure_name}" />
+        <!-- Photo with Linear Gradient Mask: Head starts right beneath the top header card, torso fades smoothly into background -->
+        <div class="absolute top-[96px] left-0 right-0 h-[48%] pointer-events-none overflow-hidden select-none"
+             style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.85) 50%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.85) 50%, rgba(0,0,0,0.2) 82%, rgba(0,0,0,0) 100%);">
+            <img src="{img_data}" class="w-full h-full object-cover object-top filter contrast-115 opacity-85 transition-transform duration-500 group-hover:scale-105" alt="{figure_name}" />
         </div>
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <!-- 1. TOP HEADER CARD: MBTI Code, Archetype Title ('The...'), dan Nama Tokoh tetap di bagian ATAS -->
-            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3 shadow-sm mb-2 flex-shrink-0">
-                <div class="flex items-center justify-between mb-1">
-                    <span class="px-2.5 py-0.5 rounded-lg {badge_bg} text-white font-black text-xs tracking-wide shadow-sm">{type_code}</span>
-                    <span class="text-[11px] font-extrabold text-[#475569] uppercase tracking-wider">{type_title}</span>
+            <div>
+                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
+                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                    <div class="flex items-center justify-between mb-1.5">
+                        <span class="px-3 py-0.5 rounded-full {badge_bg} text-white font-black text-xs tracking-wider shadow-sm">{type_code}</span>
+                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">{type_title}</span>
+                    </div>
+                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                        {figure_name}
+                    </div>
                 </div>
-                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate">
-                    {figure_name}
-                </div>
-            </div>
 
-            <!-- 2. OPEN PHOTO WINDOW: Ruang terbuka khusus agar kepala & wajah tokoh terlihat jelas tanpa terhalang text card -->
-            <div class="h-[185px] w-full flex-shrink-0"></div>
+                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
+                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
 
-            <!-- 3. BOTTOM SECTION: Text Cards untuk Kekuatan, Titik Buta, dan Mitra Ideal digeser ke BAWAH -->
-            <div class="flex-1 flex flex-col justify-between">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-2.5 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100/90 shadow-xs">
+                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -127,7 +126,7 @@ def make_archetype_card(type_code, type_title, figure_name, img_data, strengths,
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-2.5 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100/90 shadow-xs">
+                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -135,12 +134,12 @@ def make_archetype_card(type_code, type_title, figure_name, img_data, strengths,
                         {w_html}
                     </ul>
                 </div>
+            </div>
 
-                <!-- Footer Mitra Sinergi -->
-                <div class="pt-2 border-t border-slate-200/90 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                    <span>🤝 Mitra Ideal:</span>
-                    <span class="text-[#2563EB] font-black">{partner_types}</span>
-                </div>
+            <!-- Footer Mitra Sinergi -->
+            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
+                <span>🤝 Mitra Ideal:</span>
+                <span class="text-[#2563EB] font-black">{partner_types}</span>
             </div>
         </div>
     </div>
