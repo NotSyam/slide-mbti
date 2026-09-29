@@ -41,7 +41,7 @@ img_maia = get_b64_image("page_19_0_Image2083.jpg")
 img_habibie = get_b64_image("page_20_0_Image2123.jpg")
 img_tony = get_b64_image("page_21_0_Image2149.jpg")
 img_gusdur = get_b64_image("page_22_0_Image2189.jpg")
-img_srimulyani = get_b64_image("page_23_0_Image2215.jpg")
+img_srimulyani = get_b64_image("sri_mulyani_new.jpg")
 img_sandiaga = get_b64_image("page_24_0_Image2255.jpg")
 img_enzy = get_b64_image("page_25_0_Image2295.jpg")
 img_najwa = get_b64_image("page_26_0_Image2335.jpg")
@@ -49,7 +49,7 @@ img_iwan = get_b64_image("page_27_0_Image2375.jpg")
 img_deddy = get_b64_image("page_28_0_Image2401.webp")
 img_raffi = get_b64_image("page_29_0_Image2441.jpg")
 img_ahy = get_b64_image("page_30_0_Image2481.jpg")
-img_jobs = get_b64_image("page_31_0_Image2521.jpg")
+img_jobs = get_b64_image("steve_jobs_new.jpg")
 
 # Reusable header component with PT. PP square logo in top-left
 def make_header(category, title, badge_text, badge_color="bg-[#4F90F6]/15 text-[#1D4ED8] border-[#4F90F6]/30"):
