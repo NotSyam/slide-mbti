@@ -1666,7 +1666,7 @@ slides = [
                     "Mengabaikan dampak jangka panjang."
                 ], "INTJ / ISTJ", "bg-amber-600")}
 
-                {make_archetype_card("ISFP", "The Adventurer", "Agus H. Yudhoyono (AHY)", img_ahy, [
+                {make_archetype_card("ISFP", "The Adventurer", "Nadiem A. Makarim", img_ahy, [
                     "Sangat peka, tenang, teguh pada komitmen.",
                     "Bertindak selaras dengan nilai integritas pribadi.",
                     "Eksekutor karya lapangan yang rapi dan praktis."
