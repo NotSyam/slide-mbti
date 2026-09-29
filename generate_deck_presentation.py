@@ -100,23 +100,23 @@ def make_archetype_card(type_code, type_title, figure_name, img_data, strengths,
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full {badge_bg} text-white font-black text-xs tracking-wider shadow-sm">{type_code}</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">{type_title}</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        {figure_name}
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full {badge_bg} text-white font-black text-xs tracking-wider shadow-sm">{type_code}</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">{type_title}</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    {figure_name}
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -126,7 +126,7 @@ def make_archetype_card(type_code, type_title, figure_name, img_data, strengths,
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -134,12 +134,12 @@ def make_archetype_card(type_code, type_title, figure_name, img_data, strengths,
                         {w_html}
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">{partner_types}</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">{partner_types}</span>
+                </div>
             </div>
         </div>
     </div>

@@ -1669,23 +1669,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-emerald-600 text-white font-black text-xs tracking-wider shadow-sm">ISTJ</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Inspector</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Basuki Tjahaja P. (Ahok)
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-emerald-600 text-white font-black text-xs tracking-wider shadow-sm">ISTJ</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Inspector</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Basuki Tjahaja P. (Ahok)
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -1704,7 +1704,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -1721,12 +1721,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">ENFP / ENTP</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">ENFP / ENTP</span>
+                </div>
             </div>
         </div>
     </div>
@@ -1742,23 +1742,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-emerald-600 text-white font-black text-xs tracking-wider shadow-sm">ESTJ</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Executive</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Dahlan Iskan
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-emerald-600 text-white font-black text-xs tracking-wider shadow-sm">ESTJ</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Executive</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Dahlan Iskan
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -1777,7 +1777,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -1794,12 +1794,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">INFP / ISFP</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">INFP / ISFP</span>
+                </div>
             </div>
         </div>
     </div>
@@ -1815,23 +1815,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-emerald-600 text-white font-black text-xs tracking-wider shadow-sm">ISFJ</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Defender</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Maudy Ayunda
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-emerald-600 text-white font-black text-xs tracking-wider shadow-sm">ISFJ</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Defender</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Maudy Ayunda
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -1850,7 +1850,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -1867,12 +1867,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">ENTP / ENTJ</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">ENTP / ENTJ</span>
+                </div>
             </div>
         </div>
     </div>
@@ -1888,23 +1888,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-emerald-600 text-white font-black text-xs tracking-wider shadow-sm">ESFJ</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Consul</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Maia Estianty
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-emerald-600 text-white font-black text-xs tracking-wider shadow-sm">ESFJ</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Consul</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Maia Estianty
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -1923,7 +1923,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -1940,12 +1940,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">INTP / INTJ</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">INTP / INTJ</span>
+                </div>
             </div>
         </div>
     </div>
@@ -1993,23 +1993,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-[#2563EB] text-white font-black text-xs tracking-wider shadow-sm">ENTJ</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Commander</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Prof. B.J. Habibie
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-[#2563EB] text-white font-black text-xs tracking-wider shadow-sm">ENTJ</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Commander</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Prof. B.J. Habibie
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -2028,7 +2028,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -2045,12 +2045,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">INFP / ISFJ</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">INFP / ISFJ</span>
+                </div>
             </div>
         </div>
     </div>
@@ -2066,23 +2066,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-[#2563EB] text-white font-black text-xs tracking-wider shadow-sm">INTJ</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Architect</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Sri Mulyani Indrawati
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-[#2563EB] text-white font-black text-xs tracking-wider shadow-sm">INTJ</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Architect</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Sri Mulyani Indrawati
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -2101,7 +2101,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -2118,12 +2118,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">ENFP / ESFJ</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">ENFP / ESFJ</span>
+                </div>
             </div>
         </div>
     </div>
@@ -2139,23 +2139,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-[#2563EB] text-white font-black text-xs tracking-wider shadow-sm">ENTP</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Debater</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Tony Stark / Innovator
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-[#2563EB] text-white font-black text-xs tracking-wider shadow-sm">ENTP</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Debater</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Tony Stark / Innovator
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -2174,7 +2174,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -2191,12 +2191,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">INFJ / ISTJ</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">INFJ / ISTJ</span>
+                </div>
             </div>
         </div>
     </div>
@@ -2212,23 +2212,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-[#2563EB] text-white font-black text-xs tracking-wider shadow-sm">INTP</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Logician</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Gus Dur (Abdurrahman W.)
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-[#2563EB] text-white font-black text-xs tracking-wider shadow-sm">INTP</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Logician</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Gus Dur (Abdurrahman W.)
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -2247,7 +2247,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -2264,12 +2264,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">ENTJ / ESTJ</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">ENTJ / ESTJ</span>
+                </div>
             </div>
         </div>
     </div>
@@ -2317,23 +2317,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-purple-700 text-white font-black text-xs tracking-wider shadow-sm">ENFJ</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Protagonist</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Sandiaga Uno
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-purple-700 text-white font-black text-xs tracking-wider shadow-sm">ENFJ</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Protagonist</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Sandiaga Uno
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -2352,7 +2352,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -2369,12 +2369,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">INTP / ISTP</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">INTP / ISTP</span>
+                </div>
             </div>
         </div>
     </div>
@@ -2390,23 +2390,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-purple-700 text-white font-black text-xs tracking-wider shadow-sm">INFJ</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Advocate</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Najwa Shihab
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-purple-700 text-white font-black text-xs tracking-wider shadow-sm">INFJ</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Advocate</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Najwa Shihab
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -2425,7 +2425,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -2442,12 +2442,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">ENTP / ESTP</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">ENTP / ESTP</span>
+                </div>
             </div>
         </div>
     </div>
@@ -2463,23 +2463,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-purple-700 text-white font-black text-xs tracking-wider shadow-sm">ENFP</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Campaigner</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Enzy Storia
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-purple-700 text-white font-black text-xs tracking-wider shadow-sm">ENFP</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Campaigner</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Enzy Storia
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -2498,7 +2498,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -2515,12 +2515,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">INTJ / ISTJ</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">INTJ / ISTJ</span>
+                </div>
             </div>
         </div>
     </div>
@@ -2536,23 +2536,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-purple-700 text-white font-black text-xs tracking-wider shadow-sm">INFP</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Mediator</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Iwan Fals
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-purple-700 text-white font-black text-xs tracking-wider shadow-sm">INFP</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Mediator</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Iwan Fals
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -2571,7 +2571,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -2588,12 +2588,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">ENTJ / ESTJ</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">ENTJ / ESTJ</span>
+                </div>
             </div>
         </div>
     </div>
@@ -2641,23 +2641,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-amber-600 text-white font-black text-xs tracking-wider shadow-sm">ISTP</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Virtuoso</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Steve Jobs (Craftsman)
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-amber-600 text-white font-black text-xs tracking-wider shadow-sm">ISTP</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Virtuoso</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Steve Jobs (Craftsman)
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -2676,7 +2676,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -2693,12 +2693,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">ENFJ / ESFJ</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">ENFJ / ESFJ</span>
+                </div>
             </div>
         </div>
     </div>
@@ -2714,23 +2714,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-amber-600 text-white font-black text-xs tracking-wider shadow-sm">ESTP</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Entrepreneur</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Deddy Corbuzier
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-amber-600 text-white font-black text-xs tracking-wider shadow-sm">ESTP</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Entrepreneur</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Deddy Corbuzier
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -2749,7 +2749,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -2766,12 +2766,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">INFJ / ISFJ</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">INFJ / ISFJ</span>
+                </div>
             </div>
         </div>
     </div>
@@ -2787,23 +2787,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-amber-600 text-white font-black text-xs tracking-wider shadow-sm">ESFP</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Entertainer</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Raffi Ahmad
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-amber-600 text-white font-black text-xs tracking-wider shadow-sm">ESFP</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Entertainer</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Raffi Ahmad
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -2822,7 +2822,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -2839,12 +2839,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">INTJ / ISTJ</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">INTJ / ISTJ</span>
+                </div>
             </div>
         </div>
     </div>
@@ -2860,23 +2860,23 @@
 
         <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
         <div class="relative z-10 flex flex-col justify-between h-full">
-            <div>
-                <!-- Top Header Card (Sesuai referensi gambar: Nama, MBTI, & The Archetype berada di atas) -->
-                <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="px-3 py-0.5 rounded-full bg-amber-600 text-white font-black text-xs tracking-wider shadow-sm">ISFP</span>
-                        <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Adventurer</span>
-                    </div>
-                    <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
-                        Agus H. Yudhoyono (AHY)
-                    </div>
+            <!-- 1. Top Header Card: Berada di paling atas kartu sesuai referensi -->
+            <div class="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-sm">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="px-3 py-0.5 rounded-full bg-amber-600 text-white font-black text-xs tracking-wider shadow-sm">ISFP</span>
+                    <span class="text-xs font-black text-[#475569] uppercase tracking-wider">The Adventurer</span>
                 </div>
+                <div class="text-xl font-black text-[#0D1B2A] tracking-tight truncate mt-0.5">
+                    Agus H. Yudhoyono (AHY)
+                </div>
+            </div>
 
-                <!-- Spacer area wajah: Ruang bersih ~180px agar muka tokoh tampil utuh tepat di bawah header card -->
-                <div class="h-[180px] w-full flex-shrink-0 pointer-events-none"></div>
+            <!-- 2. Area Wajah Tokoh: Tengah terbuka bebas tanpa tertutupi teks karena justify-between -->
 
+            <!-- 3. Bottom Group: Kekuatan Alami, Titik Buta, dan Mitra Ideal merapat bersama di bawah -->
+            <div class="space-y-2.5">
                 <!-- Strengths (+) with pure contrast background -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
                     </div>
@@ -2895,7 +2895,7 @@
                 </div>
 
                 <!-- Blindspots (-) -->
-                <div class="mb-3 bg-white/90 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100 shadow-xs">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-2.5 border border-slate-100 shadow-sm">
                     <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
                     </div>
@@ -2912,12 +2912,12 @@
         </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">ENTJ / ESTJ</span>
+                <!-- Footer Mitra Sinergi: Menempel rapi tepat di bawah Titik Buta -->
+                <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/95 rounded-xl py-2 px-3 shadow-xs">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">ENTJ / ESTJ</span>
+                </div>
             </div>
         </div>
     </div>
