@@ -75,70 +75,71 @@ def make_header(category, title, badge_text, badge_color="bg-[#4F90F6]/15 text-[
     </div>
     """
 
-# Archetype card with dedicated unobstructed photo hero at top, and text cards shifted below
+# Archetype card with Linear Gradient Mask photo + mathematically aligned bullets
 def make_archetype_card(type_code, type_title, figure_name, img_data, strengths, weaknesses, partner_types, badge_bg="bg-[#2563EB]"):
     s_html = "".join([
         f"""<li class="bento-bullet">
-            <span class="bullet-icon text-emerald-600"><span class="material-symbols-outlined text-[19px]">check_circle</span></span>
-            <span class="bullet-text text-xs font-bold text-[#0D1B2A]">{s}</span>
+            <span class="bullet-icon text-emerald-600"><span class="material-symbols-outlined text-[20px]">check_circle</span></span>
+            <span class="bullet-text text-sm font-bold text-[#0D1B2A]">{s}</span>
         </li>""" for s in strengths
     ])
     w_html = "".join([
         f"""<li class="bento-bullet">
-            <span class="bullet-icon text-rose-600"><span class="material-symbols-outlined text-[19px]">warning</span></span>
-            <span class="bullet-text text-xs font-semibold text-[#475569]">{w}</span>
+            <span class="bullet-icon text-rose-600"><span class="material-symbols-outlined text-[20px]">warning</span></span>
+            <span class="bullet-text text-sm font-semibold text-[#475569]">{w}</span>
         </li>""" for w in weaknesses
     ])
     
     return f"""
-    <div class="relative bg-white rounded-[28px] border-2 border-slate-200 shadow-md p-5 flex flex-col justify-between overflow-hidden group hover:border-[#2563EB] transition-all h-full">
-        <!-- Top Photo Hero: Dedicated frame so the figure's face is 100% CLEAR & UNOBSTRUCTED -->
-        <div class="relative h-[230px] rounded-2xl overflow-hidden bg-slate-100 border border-slate-200/80 mb-3 flex-shrink-0 group-hover:shadow-md transition">
-            <img src="{img_data}" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" alt="{figure_name}" />
-            
-            <!-- Top Badges on Photo (Corners only, completely clear of face) -->
-            <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 z-10">
-                <span class="px-3 py-1 rounded-lg {badge_bg} text-white font-black text-xs tracking-wider shadow-md">{type_code}</span>
-            </div>
-            <div class="absolute top-2.5 right-2.5 z-10">
-                <span class="px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-white font-bold text-[11px] tracking-wide shadow-md uppercase">{type_title}</span>
-            </div>
-
-            <!-- Figure Name Overlay at bottom of photo with elegant gradient -->
-            <div class="absolute bottom-0 left-0 right-0 p-3 pt-6 bg-gradient-to-t from-black/85 via-black/45 to-transparent flex items-center justify-between z-10">
-                <div class="text-white font-black text-base tracking-tight truncate drop-shadow-sm">
-                    {figure_name}
-                </div>
-                <span class="material-symbols-outlined text-white/80 text-sm">badge</span>
-            </div>
+    <div class="relative bg-white rounded-[28px] border-2 border-slate-200 shadow-md p-6 flex flex-col justify-between overflow-hidden group hover:border-[#2563EB] transition-all">
+        <!-- Photo with Linear Gradient Mask: Head & Face are clear, torso fades smoothly into card background -->
+        <div class="absolute top-0 left-0 right-0 h-[52%] pointer-events-none overflow-hidden select-none"
+             style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.78) 45%, rgba(0,0,0,0.2) 75%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.78) 45%, rgba(0,0,0,0.2) 75%, rgba(0,0,0,0) 100%);">
+            <img src="{img_data}" class="w-full h-full object-cover object-top filter grayscale-[10%] contrast-115 opacity-80 transition-transform duration-500 group-hover:scale-105" alt="{figure_name}" />
         </div>
 
-        <!-- Text Cards: Shifted DOWN below the photo, ensuring zero overlap with the face -->
-        <div class="flex flex-col justify-between flex-1 gap-2.5">
-            <!-- Strengths (+) Container -->
-            <div class="bg-[#F0FDF4] border border-emerald-200/80 rounded-2xl p-3">
-                <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
-                </div>
-                <ul class="space-y-1.5">
-                    {s_html}
-                </ul>
-            </div>
+        <!-- Foreground Content (z-10 ensures 100% crisp readability) -->
+        <div class="relative z-10 flex flex-col justify-between h-full">
+            <!-- Ruang kosong di bagian atas agar muka tokoh tidak terhalangi sama sekali -->
+            <div class="h-[210px] w-full flex-shrink-0"></div>
 
-            <!-- Blindspots (-) Container -->
-            <div class="bg-[#FFF1F2] border border-rose-200/80 rounded-2xl p-3">
-                <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
+            <div class="flex-1 flex flex-col justify-between">
+                <!-- Text Header Pill (digeser ke bawah area wajah tokoh) -->
+                <div class="bg-white/92 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3 shadow-sm mb-3">
+                    <div class="flex items-center justify-between mb-1.5">
+                        <span class="px-2.5 py-0.5 rounded-lg {badge_bg} text-white font-black text-xs tracking-wide shadow-sm">{type_code}</span>
+                        <span class="text-[11px] font-extrabold text-[#475569] uppercase tracking-wider">{type_title}</span>
+                    </div>
+                    <div class="text-lg font-black text-[#0D1B2A] tracking-tight truncate">
+                        {figure_name}
+                    </div>
                 </div>
-                <ul class="space-y-1.5">
-                    {w_html}
-                </ul>
-            </div>
 
-            <!-- Footer Mitra Sinergi -->
-            <div class="border border-slate-200 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50 rounded-xl py-2 px-3">
-                <span>🤝 Mitra Ideal:</span>
-                <span class="text-[#2563EB] font-black">{partner_types}</span>
+                <!-- Strengths (+) with pure contrast background -->
+                <div class="mb-3 bg-white/85 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100/80">
+                    <div class="text-xs font-black text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-base">verified</span> KEKUATAN ALAMI (+)
+                    </div>
+                    <ul class="space-y-1.5">
+                        {s_html}
+                    </ul>
+                </div>
+
+                <!-- Blindspots (-) -->
+                <div class="mb-3 bg-white/85 backdrop-blur-[2px] rounded-2xl p-2.5 border border-slate-100/80">
+                    <div class="text-xs font-black text-rose-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-base">report_problem</span> TITIK BUTA / WASPADA (-)
+                    </div>
+                    <ul class="space-y-1.5">
+                        {w_html}
+                    </ul>
+                </div>
+
+                <!-- Footer Mitra Sinergi -->
+                <div class="pt-2 border-t border-slate-200/90 text-xs font-bold text-[#334155] flex items-center justify-center gap-1.5 bg-slate-50/90 rounded-xl py-2 px-3">
+                    <span>🤝 Mitra Ideal:</span>
+                    <span class="text-[#2563EB] font-black">{partner_types}</span>
+                </div>
             </div>
         </div>
     </div>
