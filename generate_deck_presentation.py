@@ -20,9 +20,14 @@ output_file = r"D:\Abdullah Syamsidar\Campur Aduk (AGY)\personality_perspective_
 assets_dir = r"D:\Abdullah Syamsidar\Campur Aduk (AGY)\tokoh_assets"
 logo_path = r"C:\Users\fariz\.gemini\antigravity\brain\293e051e-2eef-4e59-9886-9c0c62dbd90a\.user_uploaded\media_1790665817547.png"
 
-# Load Logo
+# Load Logo PT. PP
 with open(logo_path, "rb") as f:
     logo_b64 = f"data:image/png;base64,{base64.b64encode(f.read()).decode('utf-8')}"
+
+# Load Logo Danantara Indonesia
+danantara_path = r"D:\Abdullah Syamsidar\Campur Aduk (AGY)\Danantara_Indonesia.svg"
+with open(danantara_path, "rb") as f:
+    danantara_b64 = f"data:image/svg+xml;base64,{base64.b64encode(f.read()).decode('utf-8')}"
 
 # Load and encode images to base64
 def get_b64_image(filename):
@@ -51,10 +56,11 @@ img_raffi = get_b64_image("page_29_0_Image2441.jpg")
 img_ahy = get_b64_image("page_30_0_Image2481.jpg")
 img_jobs = get_b64_image("steve_jobs_new.jpg")
 
-# Reusable header component with PT. PP square logo in top-left
+# Reusable header component with PT. PP square logo in top-left and Danantara logo in top-right
 def make_header(category, title, badge_text, badge_color="bg-[#4F90F6]/15 text-[#1D4ED8] border-[#4F90F6]/30"):
     return f"""
     <div class="flex items-center justify-between pb-4 border-b-2 border-slate-200/90 mb-6">
+        <!-- Kiri Atas: Logo PT. PP & Judul Slide -->
         <div class="flex items-center gap-5">
             <!-- Kotak Persegi Logo PT. PP -->
             <div class="w-16 h-16 rounded-2xl bg-white border-2 border-slate-200 shadow-sm flex items-center justify-center p-2.5 flex-shrink-0">
@@ -68,9 +74,17 @@ def make_header(category, title, badge_text, badge_color="bg-[#4F90F6]/15 text-[
                 <h2 class="text-3xl font-black text-[#0D1B2A] tracking-tight">{title}</h2>
             </div>
         </div>
-        <div class="px-5 py-2 rounded-full {badge_color} font-black text-sm border shadow-sm flex items-center gap-2">
-            <span class="material-symbols-outlined text-lg">verified</span>
-            {badge_text}
+
+        <!-- Kanan Atas: Badge Kategori & Logo Danantara Indonesia -->
+        <div class="flex items-center gap-4 flex-shrink-0">
+            <div class="px-5 py-2.5 rounded-full {badge_color} font-black text-sm border shadow-sm flex items-center gap-2">
+                <span class="material-symbols-outlined text-lg">verified</span>
+                {badge_text}
+            </div>
+            <!-- Logo Danantara Indonesia di Kanan Atas -->
+            <div class="h-16 px-5 py-2.5 rounded-2xl bg-white border-2 border-slate-200 shadow-sm flex items-center justify-center flex-shrink-0">
+                <img src="{danantara_b64}" class="h-9 w-auto object-contain" alt="Danantara Indonesia" />
+            </div>
         </div>
     </div>
     """
@@ -152,83 +166,107 @@ slides = [
         "category": "PEMBUKA",
         "title": "Membangun Tim Melalui Perspektif Kepribadian",
         "html": f"""
-        <div class="h-full grid grid-cols-12 gap-8">
-            <!-- Left Hero Card (8 cols) -->
-            <div class="col-span-8 bg-gradient-to-br from-white via-[#F8FAFC] to-[#EBF3FE] p-16 rounded-[36px] border-2 border-[#4F90F6]/30 shadow-2xl flex flex-col justify-between relative overflow-hidden">
-                <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-[#4F90F6]/15 blur-3xl pointer-events-none"></div>
-                
-                <div>
-                    <!-- Top Bar with PT. PP Square Box Logo -->
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="w-16 h-16 rounded-2xl bg-white border-2 border-slate-200 shadow-md flex items-center justify-center p-2.5 flex-shrink-0">
-                            <img src="{logo_b64}" class="w-full h-full object-contain" alt="PT. PP Logo" />
-                        </div>
-                        <div class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#4F90F6]/15 border border-[#4F90F6]/35 text-[#1D4ED8] font-black text-sm tracking-wider uppercase shadow-sm">
-                            <span class="material-symbols-outlined text-xl">diversity_3</span>
+        <div class="h-full flex flex-col justify-between">
+            <!-- Top Branding Bar (Full Width, Balanced & Symmetrical) -->
+            <div class="flex items-center justify-between pb-5 mb-6 border-b-2 border-slate-200/90 flex-shrink-0">
+                <!-- Kiri: Logo PT. PP & Event Pill -->
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 rounded-2xl bg-white border-2 border-slate-200 shadow-sm flex items-center justify-center p-2.5 flex-shrink-0">
+                        <img src="{logo_b64}" class="w-full h-full object-contain" alt="PT. PP Logo" />
+                    </div>
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#4F90F6]/15 border border-[#4F90F6]/35 text-[#1D4ED8] font-black text-xs tracking-wider uppercase shadow-xs mb-1">
+                            <span class="material-symbols-outlined text-base">diversity_3</span>
                             DAPENDA EXECUTIVE GATHERING • 2024
                         </div>
+                        <div class="text-xs font-bold text-[#64748B] tracking-wide">People & Culture Leadership Series</div>
                     </div>
-
-                    <h1 class="text-6xl font-black text-[#0D1B2A] tracking-tight leading-[1.12] mb-6">
-                        MEMBANGUN TIM DENGAN <br/>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] via-[#4F90F6] to-[#0284C7]">PERSPEKTIF KEPRIBADIAN</span>
-                    </h1>
-                    <p class="text-2xl text-[#334155] font-semibold leading-relaxed max-w-3xl">
-                        Mengenali Potensi Diri dan Karakter Rekan Kerja: Panduan terstruktur mengelola keberagaman kognitif demi terciptanya sinergi tim yang produktif dan harmonis.
-                    </p>
                 </div>
-                
-                <div class="pt-8 border-t-2 border-slate-200 flex items-center justify-between text-[#475569] text-lg font-bold">
-                    <div class="flex items-center gap-8">
-                        <span class="flex items-center gap-2.5">
-                            <span class="material-symbols-outlined text-[#2563EB] text-2xl">calendar_today</span>
-                            27 September 2024
-                        </span>
-                        <span class="flex items-center gap-2.5">
-                            <span class="material-symbols-outlined text-[#2563EB] text-2xl">location_on</span>
-                            Auditorium Utama Dapenda
-                        </span>
+
+                <!-- Kanan: Logo Danantara Indonesia -->
+                <div class="flex items-center gap-3">
+                    <div class="text-right hidden sm:block">
+                        <div class="text-xs font-black text-[#0D1B2A] tracking-wider uppercase">Holding Investasi</div>
+                        <div class="text-[11px] font-bold text-[#64748B]">Sovereign Wealth Fund</div>
                     </div>
-                    <span class="flex items-center gap-2.5 text-[#0D1B2A]">
-                        <span class="material-symbols-outlined text-[#2563EB] text-2xl">verified</span>
-                        People & Culture Leadership Series
-                    </span>
+                    <div class="h-16 px-5 py-2.5 rounded-2xl bg-white border-2 border-slate-200 shadow-sm flex items-center justify-center flex-shrink-0">
+                        <img src="{danantara_b64}" class="h-9 w-auto object-contain" alt="Danantara Indonesia" />
+                    </div>
                 </div>
             </div>
 
-            <!-- Right Column Bento (4 cols) -->
-            <div class="col-span-4 grid grid-rows-2 gap-8">
-                <!-- Top Right Card: Clear Stream Hero -->
-                <div class="bg-gradient-to-br from-[#4F90F6] via-[#2B76E5] to-[#1E5BBB] p-10 rounded-[36px] text-white shadow-2xl flex flex-col justify-between relative overflow-hidden">
-                    <div class="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-4">
-                        <span class="material-symbols-outlined text-4xl">psychology</span>
-                    </div>
+            <!-- Bento Grid (Remaining Height) -->
+            <div class="grid grid-cols-12 gap-8 flex-1 min-h-0">
+                <!-- Left Hero Card (8 cols) -->
+                <div class="col-span-8 bg-gradient-to-br from-white via-[#F8FAFC] to-[#EBF3FE] p-12 rounded-[36px] border-2 border-[#4F90F6]/30 shadow-2xl flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-[#4F90F6]/15 blur-3xl pointer-events-none"></div>
+                    
                     <div>
-                        <div class="text-5xl font-black mb-3 tracking-tight">16 Tipologi</div>
-                        <div class="text-white/95 font-medium text-xl leading-relaxed">
-                            Framework psikologi Carl Jung dan Myers-Briggs yang disederhanakan untuk kebutuhan para pemimpin kerja.
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#2563EB]/10 text-[#2563EB] font-black text-xs uppercase tracking-wider mb-5">
+                            <span class="material-symbols-outlined text-base">psychology</span>
+                            Framework Carl Jung & Myers-Briggs
                         </div>
+                        <h1 class="text-6xl font-black text-[#0D1B2A] tracking-tight leading-[1.12] mb-6">
+                            MEMBANGUN TIM DENGAN <br/>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] via-[#4F90F6] to-[#0284C7]">PERSPEKTIF KEPRIBADIAN</span>
+                        </h1>
+                        <p class="text-2xl text-[#334155] font-semibold leading-relaxed max-w-3xl">
+                            Mengenali Potensi Diri dan Karakter Rekan Kerja: Panduan terstruktur mengelola keberagaman kognitif demi terciptanya sinergi tim yang produktif dan harmonis.
+                        </p>
                     </div>
-                    <div class="pt-4 border-t border-white/25 flex items-center gap-2.5 text-white text-base font-bold">
-                        <span class="material-symbols-outlined text-xl">check_circle</span>
-                        Mengenal Diri Secara Objektif
+                    
+                    <div class="pt-6 border-t-2 border-slate-200 flex items-center justify-between text-[#475569] text-lg font-bold">
+                        <div class="flex items-center gap-8">
+                            <span class="flex items-center gap-2.5">
+                                <span class="material-symbols-outlined text-[#2563EB] text-2xl">calendar_today</span>
+                                27 September 2024
+                            </span>
+                            <span class="flex items-center gap-2.5">
+                                <span class="material-symbols-outlined text-[#2563EB] text-2xl">location_on</span>
+                                Auditorium Utama Dapenda
+                            </span>
+                        </div>
+                        <span class="flex items-center gap-2.5 text-[#0D1B2A]">
+                            <span class="material-symbols-outlined text-[#2563EB] text-2xl">verified</span>
+                            Leadership Series
+                        </span>
                     </div>
                 </div>
 
-                <!-- Bottom Right Card: Misty Sky Secondary -->
-                <div class="bg-gradient-to-br from-[#D9E8FC] via-[#B8D5FA] to-[#9FBEED] p-10 rounded-[36px] text-[#0D1B2A] shadow-xl flex flex-col justify-between border-2 border-[#9FBEED]">
-                    <div class="w-16 h-16 rounded-2xl bg-white/80 backdrop-blur-md flex items-center justify-center mb-4 shadow-md">
-                        <span class="material-symbols-outlined text-[#1D4ED8] text-4xl">handshake</span>
-                    </div>
-                    <div>
-                        <div class="text-3xl font-extrabold mb-3">Mencegah Friksi Tim</div>
-                        <div class="text-[#1E293B] font-semibold text-lg leading-relaxed">
-                            Mengubah 49% potensi konflik antarkaryawan menjadi kekuatan kolaborasi melalui empati komunikasi.
+                <!-- Right Column Bento (4 cols) -->
+                <div class="col-span-4 grid grid-rows-2 gap-8">
+                    <!-- Top Right Card: Clear Stream Hero -->
+                    <div class="bg-gradient-to-br from-[#4F90F6] via-[#2B76E5] to-[#1E5BBB] p-8 rounded-[36px] text-white shadow-2xl flex flex-col justify-between relative overflow-hidden">
+                        <div class="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-3">
+                            <span class="material-symbols-outlined text-3xl">psychology</span>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-black mb-2 tracking-tight">16 Tipologi</div>
+                            <div class="text-white/95 font-medium text-lg leading-relaxed">
+                                Framework psikologi Carl Jung dan Myers-Briggs yang disederhanakan untuk kebutuhan para pemimpin kerja.
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-white/25 flex items-center gap-2 text-white text-sm font-bold">
+                            <span class="material-symbols-outlined text-lg">check_circle</span>
+                            Mengenal Diri Secara Objektif
                         </div>
                     </div>
-                    <div class="inline-flex items-center gap-2 text-base font-black text-[#1E3A8A]">
-                        <span>Buka Materi Presentasi</span>
-                        <span class="material-symbols-outlined text-xl">arrow_forward</span>
+
+                    <!-- Bottom Right Card: Misty Sky Secondary -->
+                    <div class="bg-gradient-to-br from-[#D9E8FC] via-[#B8D5FA] to-[#9FBEED] p-8 rounded-[36px] text-[#0D1B2A] shadow-xl flex flex-col justify-between border-2 border-[#9FBEED]">
+                        <div class="w-14 h-14 rounded-2xl bg-white/80 backdrop-blur-md flex items-center justify-center mb-3 shadow-md">
+                            <span class="material-symbols-outlined text-[#1D4ED8] text-3xl">handshake</span>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-extrabold mb-2">Mencegah Friksi Tim</div>
+                            <div class="text-[#1E293B] font-semibold text-base leading-relaxed">
+                                Mengubah 49% potensi konflik antarkaryawan menjadi kekuatan kolaborasi melalui empati komunikasi.
+                            </div>
+                        </div>
+                        <div class="inline-flex items-center gap-2 text-sm font-black text-[#1E3A8A]">
+                            <span>Buka Materi Presentasi</span>
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2215,22 +2253,23 @@ slides = [
         "category": "PENUTUP & KOMITMEN AKSI",
         "title": "Penutup & Komitmen Aksi Bersama",
         "html": f"""
-        <div class="h-full flex flex-col">
-            <!-- Top Hero Container (Full Width) with PT. PP square logo -->
-            <div class="bg-gradient-to-r from-[#0D1B2A] via-[#1E293B] to-[#0F172A] p-12 rounded-[36px] text-white shadow-2xl flex items-center justify-between relative overflow-hidden mb-8">
-                <div class="absolute -right-12 -bottom-12 w-80 h-80 bg-[#4F90F6]/25 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="h-full flex flex-col justify-between">
+            <!-- Top Hero Banner (Full Width, Perfectly Balanced Dual Branding) -->
+            <div class="bg-gradient-to-r from-[#0D1B2A] via-[#1E293B] to-[#0F172A] p-10 rounded-[36px] text-white shadow-2xl flex items-center justify-between relative overflow-hidden mb-8 flex-shrink-0">
+                <div class="absolute -right-12 -bottom-12 w-80 h-80 bg-[#4F90F6]/20 rounded-full blur-3xl pointer-events-none"></div>
                 
+                <!-- Left: PT. PP Logo & Closing Message -->
                 <div class="flex items-center gap-6">
                     <!-- Kotak Persegi Logo PT. PP -->
                     <div class="w-20 h-20 rounded-2xl bg-white border-2 border-slate-200 shadow-md flex items-center justify-center p-3 flex-shrink-0">
                         <img src="{logo_b64}" class="w-full h-full object-contain" alt="PT. PP Logo" />
                     </div>
                     <div>
-                        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#4F90F6]/25 border border-[#4F90F6]/40 text-[#9FBEED] font-extrabold text-xs uppercase tracking-wider mb-2">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#4F90F6]/25 border border-[#4F90F6]/40 text-[#9FBEED] font-extrabold text-xs uppercase tracking-wider mb-2">
                             <span class="material-symbols-outlined text-base">celebration</span>
                             DAPENDA GATHERING 2024 • KESIMPULAN
                         </div>
-                        <h2 class="text-4xl font-black tracking-tight leading-tight mb-2">
+                        <h2 class="text-4xl font-black tracking-tight leading-tight mb-1.5">
                             Terima Kasih. <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#9FBEED] to-[#4F90F6]">Mari Bertumbuh Bersama.</span>
                         </h2>
                         <p class="text-lg text-slate-300 font-semibold leading-relaxed">
@@ -2239,13 +2278,20 @@ slides = [
                     </div>
                 </div>
 
-                <div class="w-24 h-24 rounded-[28px] bg-[#2563EB] text-white flex items-center justify-center shadow-2xl flex-shrink-0">
-                    <span class="material-symbols-outlined text-5xl">handshake</span>
+                <!-- Right: Logo Danantara Indonesia (Clean, Elevated & Prominent) -->
+                <div class="flex items-center gap-4 flex-shrink-0">
+                    <div class="text-right hidden sm:block">
+                        <div class="text-xs font-black text-white/90 tracking-wider uppercase">Didukung Oleh</div>
+                        <div class="text-[11px] font-semibold text-slate-400">Danantara Indonesia</div>
+                    </div>
+                    <div class="h-20 px-6 py-3 rounded-2xl bg-white border-2 border-slate-100 shadow-2xl flex items-center justify-center flex-shrink-0">
+                        <img src="{danantara_b64}" class="h-11 w-auto object-contain" alt="Danantara Indonesia" />
+                    </div>
                 </div>
             </div>
 
             <!-- Bottom 3 Action Commitment Bento Cards -->
-            <div class="grid grid-cols-3 gap-8 flex-1">
+            <div class="grid grid-cols-3 gap-8 flex-1 min-h-0">
                 <!-- Action 1: Q&A -->
                 <div class="bg-white p-9 rounded-[32px] border-2 border-slate-200 shadow-md flex flex-col justify-between">
                     <div>
